@@ -4,8 +4,6 @@
   const navToggle = document.querySelector('.nav-toggle');
   const nav = document.querySelector('.main-nav');
   const navLinks = nav ? nav.querySelectorAll('a') : [];
-
-    const root = document.documentElement;
   const themeToggleSelector = '[data-theme-toggle]';
   const navToggleSelector = '.nav-toggle';
 
