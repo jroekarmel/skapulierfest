@@ -10,7 +10,7 @@
   const navMarkup = `
     <nav class="main-nav" id="main-navigation" aria-label="Hauptnavigation">
       <ul>
-        <li class="nav-group"><a href="home.html">Homepage</a></li>
+        <li class="nav-group"><a href="index.html">Homepage</a></li>
         <li class="nav-group"><a href="skapulier-intro.html">Was ist das Skapulier</a></li>
         <li class="nav-group"><a href="skapulier-novene.html">Skapuliernovene</a></li>
         <li class="nav-group nav-group--has-dropdown">
