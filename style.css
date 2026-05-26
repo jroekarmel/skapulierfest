@@ -345,7 +345,6 @@ ul {
   font-size: var(--text-2xl);
   line-height: 0.95;
   letter-spacing: -0.02em;
-  max-width: 14ch;
 }
 
 .hero-text-1 {
