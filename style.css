@@ -449,16 +449,12 @@ ul {
 }
 
 /* Mailchimp */
-#mc_embed_signup .mc-field-group {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.35rem;
+#mc_embed_signup .indicates-required {
   margin-bottom: 1rem;
 }
 
 #mc_embed_signup .mc-field-group label {
   margin: 0;
-  text-align: left;
 }
 
 #mc_embed_signup .mc-field-group input[type="text"],
@@ -466,14 +462,60 @@ ul {
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
-}
-
-#mc_embed_signup .indicates-required {
-  margin-bottom: 1rem;
+  min-width: 0;
 }
 
 #mc_embed_signup .clear {
   margin-left: 0;
+}
+
+/* Mobile: stacked */
+#mc_embed_signup #mc_embed_signup_scroll {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+#mc_embed_signup .mc-field-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.35rem;
+}
+
+/* Desktop: same split feeling as your normal sections */
+@media (min-width: 920px) {
+  #mc_embed_signup #mc_embed_signup_scroll {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    column-gap: var(--space-8);
+    row-gap: 1rem;
+    align-items: center;
+  }
+
+  #mc_embed_signup .mc-field-group {
+    display: contents;
+  }
+
+  #mc_embed_signup .mc-field-group label {
+    text-align: right;
+    align-self: center;
+  }
+
+  #mc_embed_signup .mc-field-group input[type="text"],
+  #mc_embed_signup .mc-field-group input[type="email"] {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #mc_embed_signup .indicates-required,
+  #mc_embed_signup #mce-responses {
+    grid-column: 1 / -1;
+  }
+
+  #mc_embed_signup .clear {
+    grid-column: 2;
+    justify-self: start;
+  }
 }
 
 /* Sections */
