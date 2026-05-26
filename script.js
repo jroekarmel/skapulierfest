@@ -74,3 +74,30 @@
     if (event.key === 'Escape') closeNav();
   });
 })();
+
+  const mailchimpToggle = document.getElementById('mailchimp-toggle');
+  const mailchimpWrap = document.getElementById('mailchimp-form-wrap');
+
+  mailchimpToggle.addEventListener('click', function (event) {
+    event.preventDefault();
+
+    const isOpen = this.getAttribute('aria-expanded') === 'true';
+    const nextState = !isOpen;
+
+    this.setAttribute('aria-expanded', String(nextState));
+    mailchimpWrap.hidden = !nextState;
+    this.textContent = nextState ? 'Anmeldung schließen' : 'Anmeldung / Mailchimp';
+  });
+    const beschreibungToggle = document.getElementById('beschreibung-toggle');
+  const beschreibungWrap = document.getElementById('beschreibung-wrap');
+
+  beschreibungToggle.addEventListener('click', function (event) {
+    event.preventDefault();
+
+    const isOpen = this.getAttribute('aria-expanded') === 'true';
+    const nextState = !isOpen;
+
+    this.setAttribute('aria-expanded', String(nextState));
+    beschreibungWrap.hidden = !nextState;
+    this.textContent = nextState ? 'Beschreibung schließen' : 'Beschreibung';
+  });
