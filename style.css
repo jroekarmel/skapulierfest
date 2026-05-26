@@ -749,6 +749,25 @@ ul {
     margin-left: calc(240px + 1rem);
   }
 }
+/* This is the zoom for images when the mouse hovers over them */
+.image-zoom {
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.image-zoom img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 320ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .image-zoom:hover img,
+  .image-zoom:focus-within img {
+    transform: scale(1.08);
+  }
+}
 
 @media (prefers-reduced-motion: reduce) {
   html {
