@@ -336,9 +336,9 @@ ul {
 }
 
 .hero-text {
-  max-width: 58ch;
   margin: 0;
   color: var(--text-muted);
+  padding-bottom: 1em;
 }
 .hero-copy-1 h1 {
   margin: var(--space-4) 0;
@@ -454,6 +454,7 @@ ul {
 
 #mc_embed_signup .mc-field-group label {
   margin: 0;
+  padding-bottom: 0.5em;
 }
 
 #mc_embed_signup .mc-field-group input[type="text"],
@@ -621,6 +622,16 @@ ul {
   font-size: var(--text-sm);
   font-weight: 600;
 }
+.card-links a.plain-link {
+  display: inline;
+  min-height: auto;
+  padding: 0;
+  border-radius: 0;
+  background: none;
+  color: var(--brown);
+  font-weight: 400;
+}
+
 
 .link-card p,
 .feature-card p {
@@ -636,6 +647,7 @@ ul {
 .footer-inner {
   color: var(--text-muted);
   font-size: var(--text-sm);
+  text-align: center;
 }
 
 /* Logo slider */

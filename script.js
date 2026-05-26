@@ -75,29 +75,24 @@
   });
 })();
 
-  const mailchimpToggle = document.getElementById('mailchimp-toggle');
-  const mailchimpWrap = document.getElementById('mailchimp-form-wrap');
+ function setupToggle(toggleId, wrapId, openText, closedText) {
+  const toggle = document.getElementById(toggleId);
+  const wrap = document.getElementById(wrapId);
 
-  mailchimpToggle.addEventListener('click', function (event) {
+  if (!toggle || !wrap) return;
+
+  toggle.addEventListener('click', function (event) {
     event.preventDefault();
 
     const isOpen = this.getAttribute('aria-expanded') === 'true';
     const nextState = !isOpen;
 
     this.setAttribute('aria-expanded', String(nextState));
-    mailchimpWrap.hidden = !nextState;
-    this.textContent = nextState ? 'Anmeldung schließen' : 'Anmeldung / Mailchimp';
+    wrap.hidden = !nextState;
+    this.textContent = nextState ? openText : closedText;
   });
-    const beschreibungToggle = document.getElementById('beschreibung-toggle');
-  const beschreibungWrap = document.getElementById('beschreibung-wrap');
+}
 
-  beschreibungToggle.addEventListener('click', function (event) {
-    event.preventDefault();
-
-    const isOpen = this.getAttribute('aria-expanded') === 'true';
-    const nextState = !isOpen;
-
-    this.setAttribute('aria-expanded', String(nextState));
-    beschreibungWrap.hidden = !nextState;
-    this.textContent = nextState ? 'Beschreibung schließen' : 'Beschreibung';
-  });
+setupToggle('mailchimp-toggle', 'mailchimp-form-wrap', 'Anmeldung schließen', 'Anmeldung / Mailchimp');
+setupToggle('beschreibung-toggle', 'beschreibung-wrap', 'Beschreibung schließen', 'Beschreibung');
+setupToggle('datenschutz-toggle', 'datenschutz-wrap', 'Datenschutz schließen', 'Datenschutz');
