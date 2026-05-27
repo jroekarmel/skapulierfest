@@ -560,7 +560,7 @@ ul {
 }
 
 .section h2 {
-  margin: var(--space-3) 0 0;
+  margin: var(--space-3) 0 0.5em;
   font-size: var(--text-xl);
   line-height: 1;
 }
