@@ -156,8 +156,22 @@ ul {
 }
 
 .brand-logo {
-  width: clamp(100px, 28vw, 180px);
+  max-width : 100%;
   object-fit: contain;
+  width: fit-content;
+  margin-inline: auto;
+    overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+.brand-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 320ms ease;
+}
+
+.brand-logo:hover img {
+  transform: scale(1.02);
 }
 
 .header-actions {
