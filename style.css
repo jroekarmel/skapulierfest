@@ -22,11 +22,12 @@
   --brown: #4c2923;
   --sand: #d1c1ad;
   --gold: #d1881a;
+  --comp2: #234D49;
   --bg: #f5efe8;
   --surface: #fbf8f3;
   --surface-strong: #efe5d7;
   --text: #2d1a16;
-  --text-muted: #6d554f;
+  --text-muted: #234d49;
   --border: rgba(76, 41, 35, 0.14);
   --shadow-sm: 0 6px 18px rgba(76, 41, 35, 0.08);
   --shadow-md: 0 18px 40px rgba(76, 41, 35, 0.13);
@@ -131,7 +132,7 @@ ul {
   top: 0;
   z-index: 40;
   backdrop-filter: blur(14px);
-  background: rgba(251, 248, 243, 0.82);
+  background: rgba(171, 204, 201, 0.75);
   border-bottom: 1px solid var(--border);
 }
 
@@ -325,8 +326,8 @@ ul {
   align-items: center;
   padding: 0.45rem 0.8rem;
   border-radius: var(--radius-full);
-  background: rgba(209, 136, 26, 0.14);
-  color: var(--gold);
+  background: rgba(204, 176, 171, 0.44);
+  color: var(--comp2);
   font-size: var(--text-xs);
   font-weight: 700;
   text-transform: uppercase;
