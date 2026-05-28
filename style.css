@@ -132,7 +132,7 @@ ul {
   top: 0;
   z-index: 40;
   backdrop-filter: blur(14px);
-  background: rgba(171, 204, 201, 0.75);
+  background: rgba(171, 204, 201, 0.90);
   border-bottom: 1px solid var(--border);
 }
 
