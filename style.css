@@ -310,7 +310,7 @@ ul {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-6);
-  align-items: center;
+  align-items: top;
 }
 
 .hero-grid-1col {
