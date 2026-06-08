@@ -651,6 +651,7 @@ ul {
   align-items: center;
   justify-content: center;
   min-height: 2.75rem;
+  max-height: 3rem;
   padding: 0.7rem 0.9rem;
   border-radius: var(--radius-full);
   background: rgba(209, 193, 173, 0.24);
@@ -871,7 +872,7 @@ ul {
   }
 
   #mc_embed_signup .clear {
-    margin-left: calc(240px + 1rem);
+    margin-left: calc(140px + 0.1rem);
   }
 }
 /* This is the zoom for images when the mouse hovers over them */
