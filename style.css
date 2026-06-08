@@ -69,8 +69,8 @@ body {
   line-height: 1.65;
   color: var(--text);
   background:
-    linear-gradient(270deg, rgba(69, 105, 137, 0.438), transparent 60%),
-    linear-gradient(90deg, rgba(69, 105, 137, 0.438), transparent 46%),
+    linear-gradient(270deg, rgb(176, 216, 250, 0.845), transparent 70%),
+    linear-gradient(90deg, rgba(181, 217, 248, 0.845), transparent 70%),
     var(--bg);
 }
 
@@ -480,6 +480,11 @@ ul {
   box-sizing: border-box;
   min-width: 0;
 }
+#mc_embed_signup .mc-field-group.input-group ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  list-style: none;
+}
 
 #mc_embed_signup .clear {
   margin-left: 0;
@@ -498,6 +503,8 @@ ul {
   gap: 0.05rem;
   margin-bottom: 0.5em;
 }
+
+
 
 /* Desktop: same split feeling as your normal sections */
 @media (min-width: 920px) {
