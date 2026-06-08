@@ -23,7 +23,7 @@
   --sand: #d1c1ad;
   --gold: #d1881a;
   --comp2: #161513;
-  --bg: #A3DFFF;
+  --bg: rgb(205, 236, 236);
   --surface: #fbf8f3;
   --surface-strong: #efe5d7;
   --text: #2d1a16;
@@ -69,8 +69,8 @@ body {
   line-height: 1.65;
   color: var(--text);
   background:
-    linear-gradient(270deg, rgba(69, 105, 137, 0.438), transparent 40%),
-    linear-gradient(90deg, rgba(69, 105, 137, 0.438), transparent 40%),
+    linear-gradient(270deg, rgba(69, 105, 137, 0.438), transparent 60%),
+    linear-gradient(90deg, rgba(69, 105, 137, 0.438), transparent 46%),
     var(--bg);
 }
 
