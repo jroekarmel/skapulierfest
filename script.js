@@ -42,8 +42,20 @@
   themeToggle?.addEventListener('click', () => {
     theme = theme === 'dark' ? 'light' : 'dark';
     root.setAttribute('data-theme', theme);
+    localStorage.setItem('myStyle', theme);
     updateThemeLabel();
   });
+
+
+  window.onload = function () {
+    if (localStorage.getItem('myStyle')) {
+      theme = localStorage.getItem('myStyle');
+      root.setAttribute ("data-theme", theme);
+      updateThemeLabel();
+    }
+  }
+
+
 
   const closeNav = () => {
     if (!nav || !navToggle) return;
