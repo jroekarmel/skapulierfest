@@ -906,3 +906,46 @@ ul {
     animation-iteration-count: 1 !important;
   }
 }
+
+.impressum-block {
+  text-align: center;
+}
+
+.impressum-button {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.impressum-button:hover,
+.impressum-button:focus-visible {
+  text-decoration: underline;
+}
+
+.impressum-content {
+  font-size: 0.8rem;
+  margin-top: 0.75rem;
+  text-align: center;
+  margin: 0 30% 0 30%;
+}
+
+.impressum-content p {
+  margin-bottom: 1rem;
+}
+
+.impressum-content a {
+  font-size: 0.8rem;
+  display: inline;
+  min-height: auto;
+  padding: 0;
+  border-radius: 0;
+  background: none;
+  color: var(--brown);
+}
