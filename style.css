@@ -22,12 +22,12 @@
   --brown: #4c2923;
   --sand: #d1c1ad;
   --gold: #d1881a;
-  --comp2: #234D49;
-  --bg: #f5efe8;
+  --comp2: #161513;
+  --bg: #E7B377;
   --surface: #fbf8f3;
   --surface-strong: #efe5d7;
   --text: #2d1a16;
-  --text-muted: #234d49;
+  --text-muted: #332718;
   --border: rgba(76, 41, 35, 0.14);
   --shadow-sm: 0 6px 18px rgba(76, 41, 35, 0.08);
   --shadow-md: 0 18px 40px rgba(76, 41, 35, 0.13);
@@ -69,8 +69,8 @@ body {
   line-height: 1.65;
   color: var(--text);
   background:
-    radial-gradient(circle at top right, rgba(209, 136, 26, 0.16), transparent 28%),
-    linear-gradient(180deg, rgba(209, 193, 173, 0.18), transparent 22%),
+    linear-gradient(270deg, rgba(56, 51, 45, 0.938), transparent 33%),
+    linear-gradient(90deg, rgba(71, 58, 42, 0.604), transparent 33%),
     var(--bg);
 }
 
