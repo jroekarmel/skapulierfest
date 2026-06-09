@@ -889,6 +889,8 @@ ul {
 
 .impressum-block {
   text-align: center;
+  max-width: 1000px;
+  margin: var(--space-6) auto 0;
 }
 
 .impressum-button {
@@ -913,7 +915,6 @@ ul {
   font-size: 0.8rem;
   margin-top: 0.75rem;
   text-align: center;
-  margin: 0 30% 0 30%;
 }
 
 .impressum-content p {
