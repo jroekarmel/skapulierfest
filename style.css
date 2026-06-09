@@ -481,7 +481,7 @@ ul {
   min-width: 0;
 }
 #mc_embed_signup .mc-field-group.input-group ul {
-  display: grid;
+  display: block;
   grid-template-columns: 1fr 1fr;
   list-style: none;
 }
@@ -498,12 +498,25 @@ ul {
 }
 
 #mc_embed_signup .mc-field-group {
-  display: grid;
+  display: block;
   grid-template-columns: 1fr;
   gap: 0.05rem;
   margin-bottom: 0.5em;
 }
 
+.interest-group {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.interest-group li {
+  margin: 0 0 0.4rem 0;
+}
+
+.interest-group__child {
+  padding-left: 1.5rem;
+}
 
 
 /* Desktop: same split feeling as your normal sections */
@@ -518,9 +531,10 @@ ul {
 
   #mc_embed_signup .mc-field-group {
     display: contents;
+    align-items: left;
   }
 
-  #mc_embed_signup .mc-field-group label {
+  #mc_embed_signup .mc-field-group.input-group, #mc_embed_signup .mc-field-group label {
     text-align: right;
     align-self: center;
   }
