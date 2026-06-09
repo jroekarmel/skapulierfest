@@ -46,6 +46,34 @@
     updateThemeLabel();
   });
 
+  (function () {
+    const root = document.documentElement;
+    const step = 10;
+    const min = 90;
+    const max = 130;
+    const storageKey = 'fontSizePercent';
+
+    let size = parseInt(localStorage.getItem(storageKey), 10);
+    if (Number.isNaN(size)) size = 100;
+
+    function applySize(value) {
+      const clamped = Math.min(max, Math.max(min, value));
+      root.style.fontSize = clamped + '%';
+      localStorage.setItem(storageKey, String(clamped));
+      return clamped;
+    }
+
+    applySize(size);
+
+    document.querySelector('[data-font-increase]')?.addEventListener('click', function () {
+      size = applySize(size + step);
+    });
+
+    document.querySelector('[data-font-decrease]')?.addEventListener('click', function () {
+      size = applySize(size - step);
+    });
+  })();
+
 
   window.onload = function () {
     if (localStorage.getItem('myStyle')) {
