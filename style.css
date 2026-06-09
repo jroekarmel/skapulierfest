@@ -710,7 +710,7 @@ ul {
   place-items: center;
   padding: 1.5rem;
   opacity: 0;
-  animation: logoFade 9s infinite;
+  animation: logoFade 12s infinite;
 }
 
 .logo-slide img {
@@ -729,6 +729,7 @@ ul {
 .logo-slide--1 { animation-delay: 0s; }
 .logo-slide--2 { animation-delay: 3s; }
 .logo-slide--3 { animation-delay: 6s; }
+.logo-slide--4 { animation-delay: 9s; }
 
 @keyframes logoFade {
   0% { opacity: 0; }
@@ -738,27 +739,6 @@ ul {
   100% { opacity: 0; }
 }
 
-.logo-slider__button {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.7rem 1rem;
-  border-radius: 999px;
-  background: #4c2923;
-  color: #fff;
-  cursor: pointer;
-  user-select: none;
-}
-
-.logo-slider__button:hover,
-.logo-slider__button:focus {
-  background: #d1881a;
-}
-
-.logo-slider__toggle:checked ~ .logo-slider__frame .logo-slide,
-.logo-slider__frame:hover .logo-slide,
-.logo-slider__frame:focus-within .logo-slide {
-  animation-play-state: paused;
-}
 
 /* Tablet and up */
 @media (min-width: 640px) {
