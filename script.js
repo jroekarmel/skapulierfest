@@ -49,8 +49,8 @@
   (function () {
     const root = document.documentElement;
     const step = 10;
-    const min = 90;
-    const max = 130;
+    const min = 80;
+    const max = 160;
     const storageKey = 'fontSizePercent';
 
     let size = parseInt(localStorage.getItem(storageKey), 10);
@@ -67,6 +67,10 @@
 
     document.querySelector('[data-font-increase]')?.addEventListener('click', function () {
       size = applySize(size + step);
+    });
+
+        document.querySelector('[data-font-reset]')?.addEventListener('click', function () {
+      size = applySize(100);
     });
 
     document.querySelector('[data-font-decrease]')?.addEventListener('click', function () {
