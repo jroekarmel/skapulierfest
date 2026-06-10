@@ -132,8 +132,88 @@
     this.textContent = nextState ? openText : closedText;
   });
 }
+// Event-Rendering
+document.addEventListener("DOMContentLoaded", async () => {
+  const container = document.getElementById("event-list");
+
+  try {
+    const response = await fetch("events.json");
+    if (!response.ok) throw new Error("JSON konnte nicht geladen werden.");
+
+    const data = await response.json();
+
+    container.innerHTML = data.events.map(event => {
+      const imageHtml = event.image
+        ? `
+          <div class="image-zoom">
+            <img
+              src="${event.image}"
+              alt="${event.alt || ""}"
+              loading="lazy"
+              width="1080"
+              height="1080"
+            >
+          </div>
+        `
+        : "";
+
+      const scheduleHtml = event.schedule.map(item => `
+        <li>
+          <time datetime="${event.date}T${item.time}">${item.time} Uhr</time>
+          ${item.text}
+        </li>
+      `).join("");
+
+      const notesHtml = event.notes.map(note => `<p>${note}</p>`).join("");
+
+      const buttonHtml = event.button
+        ? `
+          <a
+            class="button button-primary"
+            href="${event.button.href}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ${event.button.label}
+          </a>
+        `
+        : "";
+
+      return `
+        <article class="event-card">
+          <div class="split-layout">
+            <div>
+              <p class="section-label">${event.section}</p>
+              <h2>${event.title}</h2>
+              ${imageHtml}
+            </div>
+
+            <div class="event-details">
+              <p>
+                <strong>Termin:</strong>
+                <time datetime="${event.date}">${event.dateLabel}</time>
+              </p>
+
+              <ul class="event-program" role="list">
+                ${scheduleHtml}
+              </ul>
+
+              ${notesHtml}
+              ${buttonHtml}
+            </div>
+          </div>
+        </article>
+      `;
+    }).join("");
+
+  } catch (error) {
+    container.innerHTML = `<p>Die Veranstaltungsdaten konnten derzeit nicht geladen werden.</p>`;
+    console.error(error);
+  }
+});
 
 setupToggle('mailchimp-toggle', 'mailchimp-form-wrap', 'Anmeldung schließen', 'Anmeldung / Mailchimp');
 setupToggle('beschreibung-toggle', 'beschreibung-wrap', 'Beschreibung schließen', 'Beschreibung');
 setupToggle('datenschutz-toggle', 'datenschutz-wrap', 'Datenschutz schließen', 'Datenschutz');
 setupToggle('impressum-toggle', 'impressum-wrap', 'Impressum schließen', 'Impressum');
+

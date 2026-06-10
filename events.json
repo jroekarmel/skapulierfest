@@ -1,0 +1,69 @@
+{
+  "events": [
+    {
+      "section": "Karmel Wien",
+      "title": "Das Skapulierfest in der Karmelitenkirche Wien",
+      "image": "img/Skapulierfest_2026_(1080x1080).jpg",
+      "alt": "Plakat zum Skapulierfest in der Karmelitenkirche Wien",
+      "date": "2026-07-16",
+      "dateLabel": "Donnerstag, 16. Juli 2026",
+      "dayOfWeek": "Donnerstag",
+      "schedule": [
+        {
+          "time": "16:30",
+          "text": "Vortrag: Über die Geschichte der Klostergründung mit P. Peter Maria Pendl OCD"
+        },
+        {
+          "time": "17:30",
+          "text": "Rosenkranz"
+        },
+        {
+          "time": "18:00",
+          "text": "Feierliches Hochamt"
+        }
+      ],
+      "button": {
+        "label": "Anmeldung zum Fest und Auflegung des Skapulier",
+        "href": "https://us6.list-manage.com/survey?u=7c9d2aa0ecc1fde64fd44bc67&id=302d546442&attribution=false"
+      },
+      "notes": [
+        "Während der hl. Messe kann das Skapulier empfangen werden.",
+        "Freiwillige Spenden kommen dem Kloster zugute."
+      ]
+    },
+    {
+      "section": "Karmel Linz",
+      "title": "Das Skapulierfest in der Karmelitenkirche Linz",
+      "image": null,
+      "alt": null,
+      "date": "2026-07-16",
+      "dateLabel": "Donnerstag, 16. Juli 2026",
+      "dayOfWeek": "Donnerstag",
+      "schedule": [
+        {
+          "time": "07:15",
+          "text": "Hl. Messe"
+        },
+        {
+          "time": "10:00",
+          "text": "Hl. Messe mit Orgelbegleitung"
+        },
+        {
+          "time": "16:50",
+          "text": "Rosenkranz"
+        },
+        {
+          "time": "17:30",
+          "text": "Hl. Messe mit Orgelbegleitung, anschließend Anbetung bis 18:30"
+        }
+      ],
+    "button": {
+        "label": "Kontakt für weitere Informationen",
+        "href": "mailto:linz@karmel.at"
+        },
+      "notes": [
+        "Dazu schon am 12.7.2026 wird um 10:00 Uhr die Messe von César Franck in A aufgeführt."
+      ]
+    }
+  ]
+}

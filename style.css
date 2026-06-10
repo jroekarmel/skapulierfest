@@ -944,3 +944,26 @@ ul {
   background: none;
   color: var(--brown);
 }
+.event-grid {
+  display: grid;
+  gap: 3rem;
+  
+}
+
+.event-card {
+  padding: 2rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.event-program {
+  margin: 1rem 0;
+  padding-left: 1.2rem;
+  list-style:square; 
+}
+
+.event-program li + li {
+  margin-top: 0.5rem;
+}
+.event-details {
+  align-self: center;
+}
