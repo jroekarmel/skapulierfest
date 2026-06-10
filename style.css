@@ -23,7 +23,7 @@
   --sand: #d1c1ad;
   --gold: #d1881a;
   --comp2: #161513;
-  --bg: #ffffff;
+  --bg: #f1f8fd;;
   --surface: #fbf8f3;
   --surface-strong: #efe5d7;
   --text: #2d1a16;
@@ -49,6 +49,7 @@
   --border: rgba(209, 193, 173, 0.16);
   --shadow-sm: 0 8px 20px rgba(0, 0, 0, 0.24);
   --shadow-md: 0 18px 42px rgba(0, 0, 0, 0.35);
+   --brown: rgb(180, 155, 151);
 }
 
 *,
@@ -68,10 +69,7 @@ body {
   font-size: var(--text-base);
   line-height: 1.65;
   color: var(--text);
-  background:
-    linear-gradient(270deg, rgba(242, 249, 255, 0.245), transparent 70%),
-    linear-gradient(90deg, rgba(204, 227, 247, 0.245), transparent 70%),
-    var(--bg);
+background: var(--bg);
 }
 
 img {
@@ -129,17 +127,9 @@ ul {
 
 /* Header */
 .site-header {
-  position: sticky;
-  top: 0;
-  z-index: 40;
-  backdrop-filter: blur(14px);
-  background: rgba(171, 204, 201, 0.25);
-  border-bottom: 1px solid var(--border);
+  background: var(--bg);
 }
 
-[data-theme="dark"] .site-header {
-  background: rgba(42, 28, 25, 0.82);
-}
 
 .header-inner {
   display: grid;
@@ -151,6 +141,11 @@ ul {
   gap: var(--space-3);
   min-height: 5rem;
   padding: var(--space-3) 0;
+  position: sticky;
+    top: 0;
+  z-index: 40;
+  background: var(--bg);
+  backdrop-filter: none;
 }
 
 .brand {
