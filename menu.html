@@ -1,0 +1,22 @@
+<script>
+  //adapt this for navigation or menu
+  function displayFilterNav() {
+    data.forEach((element) => {
+      filterSet.add(element.Gruppe);
+    });
+
+    filterSet.forEach((link) => {
+      let a = document.createElement("a");
+      //Attribute hinzufügen
+      a.href = "#";
+      a.classList.add("filter");
+      a.textContent = link;
+      a.onclick = filterByNav;
+      a.setAttribute("data-info", link);
+      //Listenelement erstellen
+      let li = document.createElement("li");
+      li.append(a);
+      groups.append(li);
+    });
+  }
+</script>
