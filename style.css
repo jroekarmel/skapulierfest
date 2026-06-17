@@ -469,7 +469,8 @@ ul {
 }
 
 #mc_embed_signup .mc-field-group input[type="text"],
-#mc_embed_signup .mc-field-group input[type="email"] {
+#mc_embed_signup .mc-field-group input[type="email"],
+#mc_embed_signup .mc-field-group select {
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
@@ -535,9 +536,20 @@ ul {
   }
 
   #mc_embed_signup .mc-field-group input[type="text"],
-  #mc_embed_signup .mc-field-group input[type="email"] {
+  #mc_embed_signup .mc-field-group input[type="email"],
+  #mc_embed_signup .mc-field-group select {
     width: 100%;
     max-width: 100%;
+      min-width: 0;
+  box-sizing: border-box;
+
+  min-height: 3rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text);
+  font: inherit;
+  line-height: 1.2;
   }
 
   #mc_embed_signup .indicates-required,
@@ -855,7 +867,8 @@ ul {
   }
 
   #mc_embed_signup .mc-field-group input[type="text"],
-  #mc_embed_signup .mc-field-group input[type="email"] {
+  #mc_embed_signup .mc-field-group input[type="email"],
+  #mc_embed_signup .mc-field-group select {
     width: 80%;
     max-width: 420px;
   }
