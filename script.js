@@ -85,6 +85,8 @@
       root.setAttribute ("data-theme", theme);
       updateThemeLabel();
     }
+    loadnavData();
+      loadformData();
   }
 
 
@@ -145,6 +147,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (!response.ok) throw new Error("JSON konnte nicht geladen werden.");
 
     const data = await response.json();
+    console.log("data:", data);
+    console.log("events:", data.events);
 
     container.innerHTML = data.events.map(event => {
       const imageHtml = event.image
@@ -221,3 +225,66 @@ setupToggle('beschreibung-toggle', 'beschreibung-wrap', 'Beschreibung schließen
 setupToggle('datenschutz-toggle', 'datenschutz-wrap', 'Datenschutz schließen', 'Datenschutz');
 setupToggle('impressum-toggle', 'impressum-wrap', 'Impressum schließen', 'Impressum');
 
+let src = 'navigation.txt';
+
+            function loadnavData() {
+                //Anfrage-Objekt erzeugen 
+                let xhr = new XMLHttpRequest(); 
+                //anfragen Methode GET :  Datei oder Web-Url
+                //open ist eine Metode des Verbindungsobjekts
+                xhr.open('GET',src);
+
+                /* xhr.responseType ist optional - häufigste Formen
+                - text(default), 
+                - json (wird automatisch geparst),
+                - document(für xml) 
+                */
+                //xhr.responseType = 'text';
+                //Bein Ereignis laden soll eine (anonyme) function ausgeführt werden
+                xhr.onload = () => {
+                    //Wenn das Ziel gefunden wurde (status 200)
+                    //wird dessen Inhalt(responseText) in das Element 
+                    //mit der id test hineingeschrieben
+                    if (xhr.status == 200) {
+                        document.getElementById('nav-script').innerHTML = xhr.response;
+                    }
+                }
+                //send ist eine Metode des Verbindungsobjekts
+                xhr.send();
+            }
+
+            //function auslösen beim laden der Seite
+            
+                        let form_src = 'form.txt';
+
+            function loadformData() {
+                //Anfrage-Objekt erzeugen 
+                let xhr = new XMLHttpRequest(); 
+                //anfragen Methode GET :  Datei oder Web-Url
+                //open ist eine Metode des Verbindungsobjekts
+                xhr.open('GET',form_src);
+
+                /* xhr.responseType ist optional - häufigste Formen
+                - text(default), 
+                - json (wird automatisch geparst),
+                - document(für xml) 
+                */
+                //xhr.responseType = 'text';
+                //Bein Ereignis laden soll eine (anonyme) function ausgeführt werden
+                xhr.onload = () => {
+                    //Wenn das Ziel gefunden wurde (status 200)
+                    //wird dessen Inhalt(responseText) in das Element 
+                    //mit der id test hineingeschrieben
+                    if (xhr.status == 200) {
+const target = document.getElementById('mc_embed_shell');
+  if (!target) return;
+  target.innerHTML = xhr.response;
+                    }
+                }
+                //send ist eine Metode des Verbindungsobjekts
+                xhr.send();
+            }
+
+            //function auslösen beim laden der Seite
+            //window.onload = loadformData;
+            
